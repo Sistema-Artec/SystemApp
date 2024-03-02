@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+        "type": "shell",
+        "command": "flutter clean; rm -rf pubspec.lock; flutter pub get",
+        "label": "flutter: refresh project",
+        "detail": "Refresh dependencies",
+        "problemMatcher": []
+    },
+    {
+        "type": "flutter",
+        "command": "flutter",
+        "args": [
+            "build",
+            "apk",
+            "--dart-define=API_URL=https://api.artecsolar.com"
+        ],
+        "group": "build",
+        "label": "flutter: flutter build apk (PROD)",
+        "detail": "Production build"
+    }
+]
+}

@@ -1,0 +1,31 @@
+{
+    "version": "1.0.0",
+    "configurations": [
+        {
+            "name": "system_app (prod - debug)",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--dart-define=API_URL=https://api.artecsolar.com"
+            ]
+        },
+        {
+            "name": "system_app (prod - release)",
+            "request": "launch",
+            "flutterMode": "release",
+            "type": "dart",
+            "args": [
+                "--dart-define=API_URL=https://api.artecsolar.com"
+            ]
+        },
+        {
+            "name": "system_app (prod - profile)",
+            "request": "launch",
+            "flutterMode": "profile",
+            "type": "dart",
+            "args": [
+                "--dart-define=API_URL=https://api.artecsolar.com"
+            ]
+        },
+    ]
+}
