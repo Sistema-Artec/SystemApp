@@ -1,4 +1,4 @@
-part of '../login_bloc.dart';
+part of '../../authentication.dart';
 
 abstract class LoginState {}
 

@@ -1,15 +1,15 @@
 // Classe criada para ir substituindo a claase antiga de autenticação: authentication_repository.dart
-part of '../../login.dart';
+part of '../../authentication.dart';
 
-abstract class LoginRepository {
+abstract class AuthenticationRepository {
   Future<void> login({
     required String email,
     required String password,
   });
 }
 
-class LoginRepositoryImpl implements LoginRepository {
-  LoginRepositoryImpl([ApiClient? client]) {
+class AuthenticationRepositoryImpl implements AuthenticationRepository {
+  AuthenticationRepositoryImpl([ApiClient? client]) {
     _client = client ?? ApiClientImpl();
   }
 

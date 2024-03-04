@@ -1,4 +1,4 @@
-part of '../login_bloc.dart';
+part of '../../authentication.dart';
 
 abstract class LoginCubit extends Cubit<LoginState> {
   LoginCubit() : super(LoginInitialState());
@@ -10,9 +10,9 @@ abstract class LoginCubit extends Cubit<LoginState> {
 }
 
 class LoginCubitImpl extends LoginCubit {
-  LoginCubitImpl(this._loginRepository);
+  LoginCubitImpl(this._authenticationRepository);
 
-  final LoginRepository _loginRepository;
+  final AuthenticationRepository _authenticationRepository;
 
   @override
   Future<void> login({
@@ -21,7 +21,7 @@ class LoginCubitImpl extends LoginCubit {
   }) async {
     emit(LoginLoadingState());
     try {
-      await _loginRepository.login(
+      await _authenticationRepository.login(
         email: email,
         password: password,
       );
