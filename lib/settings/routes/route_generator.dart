@@ -5,8 +5,6 @@ import 'package:artec_solar_app/src/authentication/authentication.dart';
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
-      case AppRoutes.authenticationScreen:
-        return buildRoute(const AuthenticationScreen(), settings: settings);
       case AppRoutes.loginScreen:
         return buildRoute(const LoginScreen(), settings: settings);
       default:

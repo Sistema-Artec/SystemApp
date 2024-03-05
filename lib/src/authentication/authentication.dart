@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:artec_solar_app/settings/app_config.dart';
 import 'package:artec_solar_app/settings/api/api_client.dart';
@@ -13,5 +12,9 @@ part 'blocs/login_cubit/login_state.dart';
 part 'data/repositories/authentication_repository.dart';
 
 // Screens
-part 'ui/screens/authentication_screen.dart';
 part 'ui/screens/login_screen.dart';
+
+// Widgets
+part 'ui/widgets/login_background_wrapper.dart';
+part 'ui/widgets/login_button.dart';
+part 'ui/widgets/login_header.dart';

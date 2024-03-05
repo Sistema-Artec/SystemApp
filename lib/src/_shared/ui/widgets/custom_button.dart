@@ -19,7 +19,7 @@ class CustomButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const Color primaryColor = AppColors.green;
+    const Color primaryColor = AppColors.primaryColor;
     return SizedBox(
       width: width ?? 150,
       height: height ?? 50,
@@ -30,7 +30,7 @@ class CustomButtonWidget extends StatelessWidget {
         backgroundColor: primaryColor,
         splashColor: primaryColor,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(100),
+          borderRadius: BorderRadius.circular(50),
         ),
         child: isLoading ? const CustomLoading() : child,
       ),
