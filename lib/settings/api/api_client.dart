@@ -168,15 +168,16 @@ class ApiClientImpl with ErrorCallbacksMixin implements ApiClient {
         error = UnauthorizedException('Sem autorização');
         break;
       case 500:
+      case 501:
       case 503:
         error = ServerException(message: 'Erro interno no servidor');
         break;
       case 200:
         try {
-          // final success = responseBody[ApiResponseKeys.success] as bool;
-          // if (success) {
-          //   return;
-          // }
+          final success = responseBody[ApiResponseKeys.payload] != null;
+          if (success) {
+            return;
+          }
           error =
               InvalidRequestException(responseBody[ApiResponseKeys.message]);
         } catch (_) {
@@ -192,8 +193,7 @@ class ApiClientImpl with ErrorCallbacksMixin implements ApiClient {
 
   Map<String, String> _getHeaders() {
     return {
-      // 'Authorization': 'Bearer ${User.token}',
-      // 'Content-Type': 'application/json; charset=utf-8',
+      // 'Authorization': '${User.token}',
     };
   }
 

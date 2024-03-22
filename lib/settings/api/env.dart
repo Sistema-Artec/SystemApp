@@ -9,5 +9,7 @@ const config = {
 const environment = config;
 
 class ApiResponseKeys {
+  static const String token = 'token';
   static const String message = 'message';
+  static const String payload = 'payload';
 }
